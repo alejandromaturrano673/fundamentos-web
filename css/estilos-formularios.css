@@ -1,0 +1,142 @@
+/* --- CONFIGURACIÓN GENERAL Y CONTENEDOR RESPONSIVO --- */
+:root {
+  --primary-color: #3b82f6; /* Azul moderno */
+  --primary-hover: #2563eb;
+  --focus-ring: rgba(59, 130, 246, 0.3);
+  --bg-input: #f8fafc; /* Fondo plano elegante */
+  --border-color: #cbd5e1;
+  --text-color: #1e293b;
+  --radius: 8px;
+  --transition: all 0.25s ease-in-out;
+}
+
+.elegant-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow:
+    0 10px 25px -5px rgba(0, 0, 0, 0.05),
+    0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  box-sizing: border-box;
+}
+
+/* Grupo de campo responsivo */
+.form-group {
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Etiquetas elegantes */
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #475569;
+  transition: color 0.2s ease;
+}
+
+/* --- ESTILOS COMUNES PARA INPUTS Y SELECTS (DISEÑO PLANO) --- */
+.form-control {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 15px;
+  color: var(--text-color);
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  outline: none;
+  box-sizing: border-box;
+  transition: var(--transition);
+  appearance: none; /* Elimina estilos nativos del select en algunos navegadores */
+}
+
+/* Estilo personalizado para el SELECT (agrega flecha propia) */
+select.form-control {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+/* --- ÉNFASIS AL CONTROL ACTIVO / FOCO (Y ENTER) --- */
+/* Cuando el usuario hace click, navega con Tab o presiona Enter para interactuar */
+.form-control:focus {
+  background-color: #ffffff;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px var(--focus-ring); /* Anillo de enfoque elegante */
+}
+
+/* Efecto dinámico en la etiqueta cuando su control interno está activo/enfocado */
+.form-group:focus-within label {
+  color: var(--primary-color);
+}
+
+/* --- BOTONES PLANOS Y ELEGANTES --- */
+.btn-container {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+}
+
+/* Botón principal */
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+/* Botón secundario */
+.btn-secondary {
+  background-color: #e2e8f0;
+  color: #475569;
+}
+
+.btn-secondary:hover {
+  background-color: #cbd5e1;
+}
+
+/* Énfasis en el foco de los botones */
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(100, 116, 139, 0.2);
+}
+
+.btn-primary:focus {
+  box-shadow: 0 0 0 4px var(--focus-ring);
+}
+
+/* --- DISEÑO RESPONSIVO (Móviles y pantallas pequeñas) --- */
+@media (max-width: 480px) {
+  .elegant-form {
+    padding: 20px 15px;
+    border-radius: 0; /* Pantalla completa en móviles pequeños si se prefiere */
+    box-shadow: none;
+  }
+
+  .btn-container {
+    flex-direction: column; /* Botones apilados verticalmente en móviles */
+  }
+}

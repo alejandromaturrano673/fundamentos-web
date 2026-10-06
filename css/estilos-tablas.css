@@ -1,0 +1,53 @@
+/* Estilos generales para la tabla */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse; /* Elimina el espacio entre los bordes de las celdas */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  color: #333333;
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra elegante alrededor de la tabla */
+  border-radius: 8px 8px 0 0; /* Bordes redondeados superiores */
+  overflow: hidden; /* Asegura que los bordes redondeados afecten a las esquinas internas */
+}
+
+/* Encabezado de la tabla */
+.styled-table thead tr {
+  background-color: #2c3e50; /* Color oscuro profesional */
+  color: #ffffff;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Celdas de cabecera y cuerpo */
+.styled-table th,
+.styled-table td {
+  padding: 14px 18px; /* Espaciado interno cómodo */
+}
+
+/* Línea divisoria muy sutil entre filas */
+.styled-table tbody tr {
+  border-bottom: 1px solid #e1e8ed;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease; /* Transición suave */
+}
+
+/* 1. FILAS CEBREADAS (Filas pares con un tono ligeramente grisáceo) */
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f8fafc;
+}
+
+/* 2. HOVER SOBRE LA FILA ACTIVA */
+.styled-table tbody tr:hover {
+  background-color: #edf2f7; /* Color de fondo destacado al pasar el cursor */
+  color: #1a202c; /* Texto ligeramente más oscuro para mejor contraste */
+  cursor: pointer; /* Cambia el cursor para indicar interactividad */
+}
+
+/* Opional: Estilo para la última fila sin borde inferior para limpiar el diseño */
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #2c3e50;
+}

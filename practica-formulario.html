@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario Plano y Elegante</title>
+    <link rel="stylesheet" href="css/estilos-formularios.css" />
+  </head>
+  <body style="background-color: #f1f5f9; padding: 40px 20px">
+    <form class="elegant-form">
+      <h2
+        style="
+          margin-top: 0;
+          margin-bottom: 24px;
+          font-size: 22px;
+          color: #0f172a;
+        "
+      >
+        Registro de Usuario
+      </h2>
+
+      <!-- Input Text -->
+      <div class="form-group">
+        <label for="nombre">Nombre Completo</label>
+        <input
+          type="text"
+          id="nombre"
+          class="form-control"
+          placeholder="Ej. María Gómez"
+          required
+        />
+      </div>
+
+      <!-- Input Text (Email) -->
+      <div class="form-group">
+        <label for="email">Correo Electrónico</label>
+        <input
+          type="email"
+          id="email"
+          class="form-control"
+          placeholder="nombre@ejemplo.com"
+          required
+        />
+      </div>
+
+      <!-- Select -->
+      <div class="form-group">
+        <label for="pais">País de Residencia</label>
+        <select id="pais" class="form-control">
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option value="es">España</option>
+          <option value="mx">México</option>
+          <option value="ar">Argentina</option>
+          <option value="co">Colombia</option>
+          <option value="pe">Perú</option>
+        </select>
+      </div>
+
+      <!-- Botones -->
+      <div class="btn-container">
+        <button type="button" class="btn btn-secondary">Cancelar</button>
+        <button type="submit" class="btn btn-primary">Guardar Datos</button>
+      </div>
+    </form>
+  </body>
+</html>
